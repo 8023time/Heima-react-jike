@@ -27,6 +27,11 @@ request.interceptors.request.use(config=>{
 request.interceptors.response.use(res=>{
     return res.data
 },error=>{
+    if(error.response.status === 401){ // 处理token失效的问题
+        use_token.remove_token() // 删除token
+        window.location.href = '/login' // 跳转到登录页面
+        window.location.reload() // 刷新页面
+    }
     return Promise.reject(error)
 })
 

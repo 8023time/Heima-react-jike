@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import AuthRoute from "@/components/AuthRoute/index";
+import AuthRoute from "@/components/AuthRoute";
 import Layout from "@/pages/Layout/index"
 import Login from "@/pages/Login/index";
 import Home from "@/pages/Home/index";

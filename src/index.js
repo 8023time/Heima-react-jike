@@ -6,6 +6,7 @@ import { RouterProvider} from "react-router-dom"
 import { Provider } from'react-redux'; // 引入Provider, 用于提供store,保证全局只有一个store
 import store from './store/index';
 import "normalize.css"
+import "react-quill/dist/quill.snow.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
