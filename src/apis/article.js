@@ -24,6 +24,29 @@ const article_api = {
       data,
     });
   },
+  // 删除文章
+  delete_article: (target) => {
+    return request({
+      url: `v1_0/mp/articles/${target}`,
+      method: "DELETE",
+    });
+  },
+   // 获取文章详情
+   get_article_infor: (target) => {
+    return request({
+      url: `/v1_0/mp/articles/${target}`,
+      method: "get",
+    });
+  },
+  // 更新文章
+  update_article: (target,data) => {
+    return request({
+      url: `/v1_0/mp/articles/${target}`,
+      method: "put",
+      data
+    });
+  },
+
 };
 
 export { article_api };
